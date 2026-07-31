@@ -1,0 +1,404 @@
+# Metorial data model (entity-relationship graph)
+generated: '2026-07-20'
+method: derived
+source: https://metorial.com/api/introspection.json
+note: Entity graph derived from Metorial API introspection type examples (object + id-prefix) and *_id
+  reference fields. 51 entities across 112 controllers / 466 endpoints. No OpenAPI is published; introspection.json
+  is the machine-readable source.
+entities:
+- object: callback
+  id_prefix: clb
+  relationships: []
+- object: callback.destination
+  id_prefix: cld
+  relationships: []
+- object: callback.event
+  id_prefix: cte
+  relationships:
+  - field: callback_id
+    relationship: belongs_to
+    target: callback
+  - field: callback_instance_id
+    relationship: belongs_to
+    target: null
+  - field: source_id
+    relationship: belongs_to
+    target: null
+- object: callback.instance
+  id_prefix: cbi
+  relationships: []
+- object: callback.notification
+  id_prefix: sdi
+  relationships: []
+- object: custom_provider
+  id_prefix: cpr
+  relationships: []
+- object: custom_provider.commit
+  id_prefix: cpcm
+  relationships:
+  - field: custom_provider_deployment_id
+    relationship: belongs_to
+    target: null
+  - field: custom_provider_id
+    relationship: belongs_to
+    target: custom_provider
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: custom_provider.deployment
+  id_prefix: cpd
+  relationships:
+  - field: custom_provider_id
+    relationship: belongs_to
+    target: custom_provider
+  - field: custom_provider_version_id
+    relationship: belongs_to
+    target: null
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: custom_provider.environment
+  id_prefix: cpenv
+  relationships:
+  - field: current_provider_version_id
+    relationship: belongs_to
+    target: null
+  - field: custom_provider_id
+    relationship: belongs_to
+    target: custom_provider
+  - field: instance_id
+    relationship: belongs_to
+    target: callback.instance
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: custom_provider.version
+  id_prefix: cpv
+  relationships:
+  - field: custom_provider_id
+    relationship: belongs_to
+    target: custom_provider
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: file
+  id_prefix: fil
+  relationships: []
+- object: file.file_link
+  id_prefix: flk
+  relationships:
+  - field: file_id
+    relationship: belongs_to
+    target: file
+- object: identity
+  id_prefix: idn
+  relationships:
+  - field: delegation_config_id
+    relationship: belongs_to
+    target: identity.delegation_config
+- object: identity.actor
+  id_prefix: iac
+  relationships:
+  - field: agent_id
+    relationship: belongs_to
+    target: null
+- object: identity.credential
+  id_prefix: icr
+  relationships:
+  - field: auth_config_id
+    relationship: belongs_to
+    target: provider.auth_config
+  - field: config_id
+    relationship: belongs_to
+    target: provider.config
+  - field: delegation_config_id
+    relationship: belongs_to
+    target: identity.delegation_config
+  - field: deployment_id
+    relationship: belongs_to
+    target: custom_provider.deployment
+  - field: identity_id
+    relationship: belongs_to
+    target: identity
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: identity.delegation
+  id_prefix: idd
+  relationships:
+  - field: delegation_config_id
+    relationship: belongs_to
+    target: identity.delegation_config
+- object: identity.delegation_config
+  id_prefix: idc
+  relationships: []
+- object: identity.delegation_request
+  id_prefix: idr
+  relationships:
+  - field: identity_id
+    relationship: belongs_to
+    target: identity
+- object: machine_access.api_key
+  id_prefix: apk
+  relationships: []
+- object: organization.instance
+  id_prefix: ins
+  relationships:
+  - field: organization_id
+    relationship: belongs_to
+    target: null
+  - field: sandbox_id
+    relationship: belongs_to
+    target: null
+- object: provider
+  id_prefix: pro
+  relationships: []
+- object: provider.auth_config
+  id_prefix: pac
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.auth_credentials
+  id_prefix: par
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.auth_export
+  id_prefix: pace
+  relationships:
+  - field: auth_method_id
+    relationship: belongs_to
+    target: provider.capabilities.auth_method
+  - field: credentials_id
+    relationship: belongs_to
+    target: null
+  - field: provider_deployment_id
+    relationship: belongs_to
+    target: null
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.auth_import
+  id_prefix: paci
+  relationships:
+  - field: auth_method_id
+    relationship: belongs_to
+    target: provider.capabilities.auth_method
+  - field: credentials_id
+    relationship: belongs_to
+    target: null
+  - field: provider_deployment_id
+    relationship: belongs_to
+    target: null
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.capabilities.auth_method
+  id_prefix: pam
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: provider_specification_id
+    relationship: belongs_to
+    target: null
+- object: provider.capabilities.trigger
+  id_prefix: ptr
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: provider_specification_id
+    relationship: belongs_to
+    target: null
+- object: provider.config
+  id_prefix: pcf
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: specification_id
+    relationship: belongs_to
+    target: provider.specification
+- object: provider.config_vault
+  id_prefix: pcvt
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.deployment
+  id_prefix: pde
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.listing
+  id_prefix: plg
+  relationships: []
+- object: provider.listing_category
+  id_prefix: pca
+  relationships: []
+- object: provider.listing_collection
+  id_prefix: pco
+  relationships: []
+- object: provider.listing_group
+  id_prefix: pgr
+  relationships: []
+- object: provider.publisher
+  id_prefix: pub
+  relationships: []
+- object: provider.setup_session
+  id_prefix: pas
+  relationships:
+  - field: identity_credential_id
+    relationship: belongs_to
+    target: null
+  - field: identity_id
+    relationship: belongs_to
+    target: identity
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.specification
+  id_prefix: psp
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: provider.tool
+  id_prefix: pto
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: specification_id
+    relationship: belongs_to
+    target: provider.specification
+- object: provider.version
+  id_prefix: prv
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: specification_id
+    relationship: belongs_to
+    target: provider.specification
+- object: session
+  id_prefix: ses
+  relationships: []
+- object: session.connection
+  id_prefix: scn
+  relationships:
+  - field: session_id
+    relationship: belongs_to
+    target: session
+- object: session.error
+  id_prefix: ser
+  relationships:
+  - field: connection_id
+    relationship: belongs_to
+    target: session.connection
+  - field: group_id
+    relationship: belongs_to
+    target: null
+  - field: provider_run_id
+    relationship: belongs_to
+    target: session.provider_run
+  - field: session_id
+    relationship: belongs_to
+    target: session
+- object: session.error_group
+  id_prefix: seg
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: session.event
+  id_prefix: sev
+  relationships:
+  - field: session_id
+    relationship: belongs_to
+    target: session
+- object: session.message
+  id_prefix: smg
+  relationships:
+  - field: connection_id
+    relationship: belongs_to
+    target: session.connection
+  - field: provider_run_id
+    relationship: belongs_to
+    target: session.provider_run
+  - field: session_id
+    relationship: belongs_to
+    target: session
+  - field: session_provider_id
+    relationship: belongs_to
+    target: null
+- object: session.participant
+  id_prefix: spt
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+- object: session.provider
+  id_prefix: spr
+  relationships:
+  - field: from_template_id
+    relationship: belongs_to
+    target: null
+  - field: from_template_provider_id
+    relationship: belongs_to
+    target: null
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: session_id
+    relationship: belongs_to
+    target: session
+- object: session.provider_run
+  id_prefix: prn
+  relationships:
+  - field: connection_id
+    relationship: belongs_to
+    target: session.connection
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: session_id
+    relationship: belongs_to
+    target: session
+  - field: session_provider_id
+    relationship: belongs_to
+    target: null
+- object: session.template
+  id_prefix: stm
+  relationships: []
+- object: session.template.provider
+  id_prefix: stp
+  relationships:
+  - field: provider_id
+    relationship: belongs_to
+    target: provider
+  - field: session_template_id
+    relationship: belongs_to
+    target: null
+- object: session.tool_call
+  id_prefix: tcl
+  relationships:
+  - field: connection_id
+    relationship: belongs_to
+    target: session.connection
+  - field: message_id
+    relationship: belongs_to
+    target: session.message
+  - field: provider_run_id
+    relationship: belongs_to
+    target: session.provider_run
+  - field: session_id
+    relationship: belongs_to
+    target: session
+  - field: session_provider_id
+    relationship: belongs_to
+    target: null

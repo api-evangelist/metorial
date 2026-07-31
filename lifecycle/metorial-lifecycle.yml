@@ -1,0 +1,32 @@
+# Metorial API lifecycle
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/api/introspection.json
+versioning:
+  scheme: date-based
+  current: '2026-01-01'
+  versions:
+    - id: mt_2026_01_01_magnetar
+      display: '2026-01-01'
+      current: true
+    - id: mt_2026_04_01_consumer
+      display: '2026-04-01-consumer'
+      current: false
+    - id: mt_2025_01_01_dashboard
+      display: '2025-01-01-dashboard'
+      current: false
+status_page: https://status.metorial.com
+status_components:
+  - Metorial Dashboard
+  - Metorial Website
+  - Metorial Authentication
+  - Metorial API (api.metorial.com)
+  - MCP Runtime
+  - Managed Provider Runtime
+  - Provider Management
+deprecation:
+  policy_url: null
+  note: >-
+    No public deprecation/sunset policy or Sunset/Deprecation header support was
+    found in the docs as of this capture. Date-based version pinning is the
+    stability mechanism.

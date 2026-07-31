@@ -1,0 +1,25 @@
+# Metorial standards conformance
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs
+standards:
+  - id: mcp
+    name: Model Context Protocol
+    conforms: true
+    evidence: >-
+      Core product hosts and serves MCP servers (Magic MCP, managed provider
+      runtime, standard MCP URLs) for Claude, ChatGPT, Cursor, Copilot, Codex.
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Brokers OAuth for downstream providers via Provider Setup Sessions
+      (Slack, GitHub, Google, etc.).
+  - id: rest-json
+    conforms: true
+    evidence: Resource-oriented REST API returning JSON with standard HTTP status codes.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a plain JSON envelope (message/status_code/type), not application/problem+json.
+  - id: cursor-pagination
+    conforms: true
+    evidence: List endpoints use after/before cursor pagination with has_more flags.

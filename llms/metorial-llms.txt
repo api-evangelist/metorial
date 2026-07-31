@@ -1,0 +1,54 @@
+# Metorial Documentation
+
+## Docs
+
+- [.pr body](https://metorial.com/docs/.pr-body.md)
+- [Getting Started with the API](https://metorial.com/docs/api-getting-started.md): Learn how to use the Metorial API, get your API keys, and make your first request
+- [Development vs Production Environments](https://metorial.com/docs/concepts-environments.md): Metorial uses instances to separate your development and production environments, allowing you to test safely before deploying to production.
+- [Monitoring and Observability](https://metorial.com/docs/concepts-monitoring.md): Metorial provides monitoring tools to help you understand how your providers are performing and debug issues.
+- [Projects and Organizations](https://metorial.com/docs/concepts-projects-organizations.md): Organizations and projects help you structure your work in Metorial and manage access to resources.
+- [Providers](https://metorial.com/docs/concepts-providers.md): Providers are catalog or custom integrations you connect to Metorial. Understanding integrations, Magic MCP servers, configs, auth configs, and provider deployments lets you control exactly how each provider is configured and authenticated.
+- [Sessions](https://metorial.com/docs/concepts-sessions.md): Sessions are the runtime layer that connects your application to one or more providers. Each session gives your AI access to tools from all the providers attached to it.
+- [Create A Portal](https://metorial.com/docs/create-portal.md): Create a branded portal and add the first integrations and skills your users can access.
+- [External Provider Authentication](https://metorial.com/docs/custom-servers-external-authentication.md): Secure your external provider connections.
+- [Connecting External Providers](https://metorial.com/docs/custom-servers-external-connecting.md): Connect your self-hosted MCP server to Metorial.
+- [Deploying Custom Providers](https://metorial.com/docs/custom-servers-managed-deployment.md): Learn how to deploy and manage versions of your custom providers.
+- [Getting Started with Custom Providers](https://metorial.com/docs/custom-servers-managed-getting-started.md): Deploy custom MCP server code without managing infrastructure.
+- [Custom Providers](https://metorial.com/docs/custom-servers-overview.md): Deploy your own custom providers beyond the pre-built integrations.
+- [Dashboard Overview](https://metorial.com/docs/dashboard-overview.md): A product tour of the Metorial dashboard: Workforce, Portals, Skills, Integrations, Magic MCP, activity, and settings.
+- [Documentation Map](https://metorial.com/docs/docs-structure.md): How the Metorial docs are organized around Workforce, portals, integrations, developers, and reference material.
+- [Glossary](https://metorial.com/docs/glossary.md): Definitions for Metorial organizations, providers, sessions, identities, consumers, and related concepts.
+- [Metorial](https://metorial.com/docs/index.md): Let your team connect AI agents and MCP clients like Cursor, ChatGPT, and Claude to approved apps, tools, and shared skills, with access controls and activity logs.
+- [Setting Up API Key Integrations](https://metorial.com/docs/integrations-api-key.md): Configure API key-based integrations in Metorial
+- [Browsing the Provider Catalog](https://metorial.com/docs/integrations-browsing-catalog.md): Find and deploy integrations from the Metorial provider catalog
+- [Enterprise BYO](https://metorial.com/docs/integrations-enterprise-byo.md): Bring Your Own credentials for enterprise deployments with dynamic provider deployments
+- [Setting Up OAuth Integrations](https://metorial.com/docs/integrations-oauth.md): Use Provider Setup Sessions to authorize users with OAuth-based providers like Slack, GitHub, and Google.
+- [Integrations Overview](https://metorial.com/docs/integrations-overview.md): Pre-built provider integrations that you can deploy without writing any code
+- [Preview Portal Access](https://metorial.com/docs/preview-portal-access.md): Preview the employee portal and confirm users can see the right integrations and skills.
+- [Magic Skills](https://metorial.com/docs/product-magic-skills.md): Magic Skills package repeatable workflows so teams can publish and govern useful agent work.
+- [Portals](https://metorial.com/docs/product-portals.md): Portals are branded places where users discover and connect approved integrations, skills, and MCP access.
+- [Provider Skills](https://metorial.com/docs/product-provider-skills.md): Provider skills are catalog summaries that describe what a provider can do. They are different from executable tools.
+- [Workforce](https://metorial.com/docs/product-workforce.md): Workforce is the control plane for connecting AI agents and applications to user-authorized integrations, skills, portals, and MCP URLs.
+- [Review Activity](https://metorial.com/docs/review-activity.md): Monitor sessions, connections, tool calls, provider runs, alerts, and authentication events.
+- [Code Review Bot with GitHub](https://metorial.com/docs/sample-projects-code-review-bot.md): Create an AI-powered bot that analyzes pull requests for security issues, code smells, and style violations
+- [HR Interview Coordinator](https://metorial.com/docs/sample-projects-interview-coordinator-bot.md): Learn how to build an AI agent that schedules interviews, sends professional emails, and coordinates with your team using Google Calendar and Gmail
+- [PM Slack Standup Bot](https://metorial.com/docs/sample-projects-slack-standup-bot.md): Create an AI-powered bot that collects daily standup responses, analyzes team progress, and posts executive summaries
+- [Error Handling](https://metorial.com/docs/sdk-error-handling.md): Handle errors gracefully in your Metorial SDK applications
+- [JavaScript SDK](https://metorial.com/docs/sdk-javascript.md): Learn how to use the Metorial JavaScript SDK for TypeScript and JavaScript applications
+- [OAuth](https://metorial.com/docs/sdk-oauth.md): Handle user authorization for OAuth-enabled providers using Provider Setup Sessions
+- [Using with AI SDK](https://metorial.com/docs/sdk-providers-ai-sdk.md): Use Metorial with Vercel AI SDK (recommended for TypeScript)
+- [Using with Anthropic](https://metorial.com/docs/sdk-providers-anthropic.md): Use Metorial with Claude models
+- [Using with Google](https://metorial.com/docs/sdk-providers-google.md): Use Metorial with Google Gemini models
+- [Using with OpenAI](https://metorial.com/docs/sdk-providers-openai.md): Use Metorial with OpenAI GPT models
+- [OpenAI-Compatible Providers](https://metorial.com/docs/sdk-providers-openai-compatible.md): Use Metorial with DeepSeek, TogetherAI, XAI, and other OpenAI-compatible APIs
+- [Provider Overview](https://metorial.com/docs/sdk-providers-overview.md): Metorial works with all major AI providers
+- [Python SDK](https://metorial.com/docs/sdk-python.md): Learn how to use the Metorial Python SDK for Python applications
+- [SDK Quickstart](https://metorial.com/docs/sdk-quickstart.md): Get up and running with Metorial in under 5 minutes
+- [Use Providers With SDKs](https://metorial.com/docs/use-providers-with-sdks.md): Connect Metorial provider tools to an LLM and build a chat-enabled app.
+- [Workforce Concepts](https://metorial.com/docs/workforce-concepts.md): Understand how Workforce connects AI agents and applications to user-authorized tools through portals, integrations, skills, MCP URLs, and activity logs.
+
+## Optional
+
+- [Dashboard](https://platform.metorial.com)
+- [Status](https://status.metorial.com)
+- [GitHub](https://github.com/metorial)

@@ -1,0 +1,34 @@
+# Metorial /.well-known discovery surface
+generated: '2026-07-20'
+method: searched
+hosts:
+  - host: https://metorial.com
+    documents:
+      - path: /.well-known/api-catalog        # RFC 9727
+        status: 200
+        file: metorial-api-catalog.json
+      - path: /.well-known/security.txt        # RFC 9116
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 401
+      - path: /.well-known/oauth-authorization-server
+        status: 401
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api.metorial.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 401
+      - path: /.well-known/oauth-authorization-server
+        status: 401
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+notes:
+  - >-
+    metorial.com publishes an RFC 9727 api-catalog linkset pointing to the API
+    introspection (introspection.json), HTML + Markdown API reference, an
+    LLM resource index, and the status JSON.

@@ -1,0 +1,15 @@
+generated: '2026-07-20'
+method: generated
+source: https://metorial.com/api/introspection.json
+note: >-
+  Agent Skills grounded in real Metorial API operations (sdkPath ids verified in
+  the API introspection). No OpenAPI is published; introspection.json is the source.
+skills:
+  - file: metorial-deploy-provider-and-open-session.md
+    name: Deploy a Metorial provider and open an agent session
+    api: https://metorial.com/api
+    operations: [providerListings.list, providers.get, providerDeployments.create, providerDeployments.authConfigs.create, providerDeployments.setupSessions.create, sessions.create, sessions.providers.create, providers.tools.list, providerRuns.list]
+  - file: metorial-magic-mcp-endpoint.md
+    name: Create a Magic MCP endpoint and issue a scoped token
+    api: https://metorial.com/api
+    operations: [magicMcpServers.list, magicMcpServers.tools, magicMcpEndpoints.create, magicMcpEndpoints.addServers, magicMcpGroups.create, magicMcpGroups.addServers, magicMcpTokens.create, magicMcpTokens.addGroups, magicMcpSessions.list]

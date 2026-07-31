@@ -1,0 +1,14 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://metorial.com/security
+url: https://metorial.com/security
+certifications:
+- SOC 2
+- GDPR
+evidence:
+- source: https://metorial.com/security
+  keywords:
+  - soc 2
+  - soc2
+  - gdpr

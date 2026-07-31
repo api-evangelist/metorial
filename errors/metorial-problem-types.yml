@@ -1,0 +1,46 @@
+# Metorial API error catalog
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs/api-getting-started
+docs:
+  - https://metorial.com/docs/api-getting-started
+  - https://metorial.com/docs/sdk-error-handling
+format: http-status + json envelope
+envelope:
+  fields: [message, status_code, type]
+problems:
+  - status: 400
+    title: Bad Request
+    meaning: Invalid request parameters.
+    sdk_class: MetorialAPIError
+  - status: 401
+    title: Unauthorized
+    meaning: Invalid or missing Metorial API key.
+    sdk_class: AuthenticationError
+  - status: 403
+    title: Forbidden
+    meaning: Insufficient access for the authenticated key.
+    sdk_class: MetorialAPIError
+  - status: 404
+    title: Not Found
+    meaning: The resource (e.g. deployment id) does not exist or is not accessible.
+    sdk_class: NotFoundError
+  - status: 429
+    title: Too Many Requests
+    meaning: Rate limit exceeded.
+    sdk_class: RateLimitError
+  - status: '5xx'
+    title: Server Error
+    meaning: Metorial-side error.
+    sdk_class: MetorialAPIError
+sdk_error_classes:
+  - name: MetorialAPIError
+    description: Base class for all API errors; carries message, HTTP status code, and error type.
+  - name: AuthenticationError
+    description: Invalid Metorial API key.
+  - name: NotFoundError
+    description: Resource id does not exist or is not accessible.
+  - name: OAuthRequiredError
+    description: A user's downstream OAuth authorization has expired and must be re-established.
+  - name: RateLimitError
+    description: Too many requests.

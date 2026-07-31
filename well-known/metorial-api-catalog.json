@@ -1,0 +1,40 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://api.metorial.com",
+      "service-desc": [
+        {
+          "href": "https://metorial.com/api/introspection.json",
+          "type": "application/json",
+          "title": "Metorial API introspection"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://metorial.com/api",
+          "type": "text/html",
+          "title": "Metorial API reference"
+        },
+        {
+          "href": "https://metorial.com/api.md",
+          "type": "text/markdown",
+          "title": "Metorial API reference in Markdown"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://metorial.com/api/llms.txt",
+          "type": "text/markdown",
+          "title": "Metorial API resource index for LLMs"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://status.metorial.com/index.json",
+          "type": "application/json",
+          "title": "Metorial API status"
+        }
+      ]
+    }
+  ]
+}

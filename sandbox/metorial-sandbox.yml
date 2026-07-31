@@ -1,0 +1,22 @@
+# Metorial sandbox / test environment
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs/concepts-environments
+docs: https://metorial.com/docs/concepts-environments
+model: instance-based test/live separation
+console: https://platform.metorial.com
+environments:
+  - name: development
+    role: Default workspace for building and testing integrations before go-live.
+    isolation: own provider deployments, API keys, provider auth configs, logs and metrics.
+    rate_limit: 100 requests per key per 10 minutes
+  - name: production
+    role: Live environment for real users and applications.
+    isolation: own provider deployments, API keys, provider auth configs, logs and metrics.
+    rate_limit: 5000 requests per key per 10 minutes
+key_prefixes:
+  secret: metorial_sk_
+  publishable: metorial_pk_
+notes:
+  - API keys are scoped per instance; use separate keys (and OAuth apps) per environment.
+  - No published static test-card / magic-value fixtures (Metorial is agent/MCP infra, not a payments API).

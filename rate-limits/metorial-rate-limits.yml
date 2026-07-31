@@ -1,0 +1,21 @@
+# Metorial API rate limits
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs/api-getting-started
+docs: https://metorial.com/docs/api-getting-started
+signal: HTTP 429 Too Many Requests
+rate_limits:
+  - scope: per-ip
+    limit_count: 1000
+    window: 10s
+    description: General limit across all requests from an IP address.
+  - scope: development-instance
+    limit_count: 100
+    window: 10m
+    per: api-key
+    description: Development instance limit per API key.
+  - scope: production-instance
+    limit_count: 5000
+    window: 10m
+    per: api-key
+    description: Production instance limit per API key.

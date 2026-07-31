@@ -1,0 +1,42 @@
+# Metorial first-party client libraries / SDKs
+generated: '2026-07-20'
+method: searched
+source: https://github.com/metorial
+packages:
+  - language: javascript
+    registry: npm
+    name: metorial
+    url: https://www.npmjs.com/package/metorial
+    install: npm install metorial
+    repo: https://github.com/metorial/metorial-node
+    official: true
+    description: Official Node.js/TypeScript SDK for the Metorial API.
+  - language: python
+    registry: pypi
+    name: metorial
+    url: https://pypi.org/project/metorial/
+    install: pip install metorial
+    repo: https://github.com/metorial/metorial-python
+    official: true
+    description: Official typed async Python SDK for the Metorial API.
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/metorial/metorial-go
+    url: https://pkg.go.dev/github.com/metorial/metorial-go
+    install: go get github.com/metorial/metorial-go
+    repo: https://github.com/metorial/metorial-go
+    official: true
+    description: Official Go SDK for the Metorial API.
+provider_adapters:
+  - language: javascript
+    registry: npm
+    name: "@metorial/ai-sdk"
+    url: https://www.npmjs.com/package/@metorial/ai-sdk
+    official: true
+    description: Vercel AI SDK adapter for Metorial tools.
+  - language: javascript
+    registry: npm
+    name: "@metorial/togetherai"
+    url: https://www.npmjs.com/package/@metorial/togetherai
+    official: true
+    description: TogetherAI provider adapter for Metorial tools.

@@ -1,0 +1,44 @@
+# Metorial API cross-cutting conventions
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs/api-getting-started
+docs: https://metorial.com/docs/api-getting-started
+base_url: https://api.metorial.com
+resource_style: resource-oriented REST, JSON request/response, standard HTTP status codes
+authentication:
+  style: bearer-api-key
+  header: Authorization
+  detail: authentication/metorial-authentication.yml
+versioning:
+  scheme: date-based
+  current: '2026-01-01'
+  version_ids: [mt_2026_01_01_magnetar, mt_2026_04_01_consumer, mt_2025_01_01_dashboard]
+  source: https://metorial.com/api/introspection.json
+pagination:
+  style: cursor
+  request_params: [after, before]
+  response_fields: [items, pagination.has_more_before, pagination.has_more_after]
+  note: >-
+    List endpoints return an `items` array plus a `pagination` object with
+    `has_more_before` / `has_more_after` flags; navigate with `after` / `before`
+    query params seeded with a resource id.
+rate_limiting:
+  general: 1000 requests per IP per 10 seconds
+  development: 100 requests per key per 10 minutes
+  production: 5000 requests per key per 10 minutes
+  signal: HTTP 429 Too Many Requests
+  detail: rate-limits/metorial-rate-limits.yml
+error_envelope:
+  format: json
+  fields: [message, status_code, type]
+  http_codes: [400, 401, 403, 404, 429, '5xx']
+  sdk_error_classes: [MetorialAPIError, AuthenticationError, NotFoundError, OAuthRequiredError, RateLimitError]
+  detail: errors/metorial-problem-types.yml
+identifiers:
+  style: prefixed opaque ids (e.g. ins_, org_, prj_, ses_, pro_)
+  detail: data-model/metorial-data-model.yml
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header is documented in the public API getting-started
+    reference as of this capture. Not asserting an Idempotency pointer.

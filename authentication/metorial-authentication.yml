@@ -1,0 +1,31 @@
+# Metorial authentication profile
+generated: '2026-07-20'
+method: searched
+source: https://metorial.com/docs/api-getting-started
+docs: https://metorial.com/docs/api-getting-started
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  scheme: bearer
+schemes:
+  - name: SecretApiKey
+    type: apiKey
+    in: header
+    header: Authorization
+    format: "Bearer metorial_sk_..."
+    prefix: metorial_sk_
+    description: >-
+      Secret API key granting full access to a project/instance. Must never be
+      exposed in client-side code. Generated in the dashboard under Developer -> API Keys.
+  - name: PublishableApiKey
+    type: apiKey
+    in: header
+    header: Authorization
+    format: "Bearer metorial_pk_..."
+    prefix: metorial_pk_
+    description: >-
+      Publishable key for public/client-side data access. Safe to embed in
+      client-side code; limited scope.
+notes:
+  - API keys are scoped to a single instance (development or production).
+  - Metorial also brokers OAuth on behalf of downstream providers (Provider Setup Sessions), but Metorial's own API is authenticated with these bearer API keys.

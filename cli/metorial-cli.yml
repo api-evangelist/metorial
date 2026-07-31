@@ -1,0 +1,18 @@
+# Metorial CLI
+generated: '2026-07-20'
+method: searched
+source: https://github.com/metorial/cli
+name: metorial
+language: go
+repo: https://github.com/metorial/cli
+description: >-
+  Agent-first command-line interface for interacting with Metorial integrations
+  and MCP servers. Also surfaced as one of the three ways to "connect any AI model
+  to 1200+ integrations (MCP, CLI, API)".
+install:
+  - method: source
+    command: go install github.com/metorial/cli@latest
+surface:
+  note: >-
+    Agent-first CLI for browsing/connecting integrations and running MCP servers.
+    Command groups are documented in the CLI repository README.
