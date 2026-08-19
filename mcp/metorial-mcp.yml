@@ -1,52 +1,53 @@
-# Metorial MCP
 generated: '2026-07-20'
 method: searched
 source: https://metorial.com/docs/product-workforce
 status: published
 product:
   name: Metorial (Vercel for MCP)
-  summary: >-
-    Metorial's core product IS Model Context Protocol infrastructure: it hosts
-    1200+ MCP servers serverlessly (Magic MCP), issues standard MCP URLs that
-    agents/clients (Claude, ChatGPT, Cursor, Copilot, Codex) connect to, and
-    handles OAuth, per-user isolation, tracing and access control. This is a
-    published, first-party hosted MCP capability.
+  summary: 'Metorial''s core product IS Model Context Protocol infrastructure: it hosts 1200+ MCP servers
+    serverlessly (Magic MCP), issues standard MCP URLs that agents/clients (Claude, ChatGPT, Cursor, Copilot,
+    Codex) connect to, and handles OAuth, per-user isolation, tracing and access control. This is a published,
+    first-party hosted MCP capability.'
   magic_mcp: https://metorial.com/docs/product-workforce
   index: https://github.com/metorial/metorial-index
-  transports: [http, sse]
-# Candidate tools derived from the Metorial REST API introspection (466 endpoints /
-# 112 controllers). These describe wrapping Metorial's own management API as MCP
-# tools; the introspection is the machine-readable source (no OpenAPI is published).
+  transports:
+  - http
+  - sse
 api_tools_status: candidate
 api_tools_source: https://metorial.com/api/introspection.json
 api_tools:
-  - name: list_providers
-    description: List providers in the Metorial catalog.
-    source_operation: providers.list
-  - name: list_provider_listings
-    description: Browse provider listings in the catalog.
-    source_operation: providerListings.list
-  - name: list_integrations
-    description: List configured integrations.
-    source_operation: integrations.list
-  - name: list_sessions
-    description: List runtime sessions.
-    source_operation: sessions.list
-  - name: list_provider_runs
-    description: List provider runs (tool-call executions).
-    source_operation: providerRuns.list
-  - name: list_agents
-    description: List agents.
-    source_operation: agents.list
-  - name: list_identities
-    description: List identities.
-    source_operation: identities.list
-  - name: list_monitors
-    description: List monitors and observability alerts.
-    source_operation: monitors.list
-  - name: get_instance
-    description: Get instance (environment) details.
-    source_operation: instance.get
-  - name: list_callbacks
-    description: List callback (webhook) configurations.
-    source_operation: callbacks.list
+- name: list_providers
+  description: List providers in the Metorial catalog.
+  source_operation: providers.list
+- name: list_provider_listings
+  description: Browse provider listings in the catalog.
+  source_operation: providerListings.list
+- name: list_integrations
+  description: List configured integrations.
+  source_operation: integrations.list
+- name: list_sessions
+  description: List runtime sessions.
+  source_operation: sessions.list
+- name: list_provider_runs
+  description: List provider runs (tool-call executions).
+  source_operation: providerRuns.list
+- name: list_agents
+  description: List agents.
+  source_operation: agents.list
+- name: list_identities
+  description: List identities.
+  source_operation: identities.list
+- name: list_monitors
+  description: List monitors and observability alerts.
+  source_operation: monitors.list
+- name: get_instance
+  description: Get instance (environment) details.
+  source_operation: instance.get
+- name: list_callbacks
+  description: List callback (webhook) configurations.
+  source_operation: callbacks.list
+deployment:
+  mode: unclear
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
