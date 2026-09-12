@@ -92,6 +92,8 @@ apis:
     x-format: introspection-json
     x-note: Proprietary machine-readable API introspection (466 endpoints); no OpenAPI is published.
 common:
+- type: Website
+  url: https://www.metorial.com/
 - type: TrustCenter
   url: security/metorial-trust-center.yml
 - type: Compliance
