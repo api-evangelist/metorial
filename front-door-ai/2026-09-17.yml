@@ -1,0 +1,32 @@
+# Front Door AI Index — metorial — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: metorial
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.metorial.com
+  final_host: metorial.com
+  ownership: own
+  owner: metorial
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 29
+  host_score: 29
+  density: 21.51
+  words: 1348
+  tiers:
+    agentic: 17
+    core: 10
+    model: 2
+  ambiguous: 34
+  top_terms:
+    agent: 34
+    AI: 10
+    MCP: 10
+    agentic: 4
+    Claude: 2
+    AI agent: 1
+    copilot: 1
+    prompts: 1
